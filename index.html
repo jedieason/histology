@@ -1882,28 +1882,27 @@
                 return async function () {
                     console.log(`[createStartHandler] Starting game with ${jsonPath}`);
                     
-                    const nameInputVal = document.getElementById("playerName").value.trim(); // MODIFIED var name
+                    const nameInputVal = document.getElementById("playerName").value.trim();
                     if (!nameInputVal) {
                         showAlertModal("請先輸入玩家名稱！");
                         document.getElementById("playerName").focus();
                         window.gameplayActive = false; 
                         return;
                     }
-                    window.currentPlayer = nameInputVal; // MODIFIED: Set from input
+                    window.currentPlayer = nameInputVal;
                     localStorage.setItem("parasite_player_name", nameInputVal);
                     window.gameplayActive = true;
                     console.log("[createStartHandler] Set window.gameplayActive to true");
 
                     document.querySelector('.start-screen').style.display = 'none'; 
                     document.querySelector('.flashcard-container').style.display = 'flex';
-                    // fetchLeaderboard(); // Already called in init and after score updates
 
                     state = 1;
                     correct = 0; wrong = 0; total = 0; 
                     console.log("[createStartHandler] Resetting scores and lists. Correct:", correct, "Wrong:", wrong);
                     document.getElementById("correct").innerHTML = correct;
                     document.getElementById("wrong").innerHTML = wrong;
-                    updateScoreDisplay(); // Update overall score display as well from current 'score'
+                    updateScoreDisplay();
                     correctList = []; wrongList = [];
                     console.log("[createStartHandler] Cleared correctList:", JSON.parse(JSON.stringify(correctList)), "wrongList:", JSON.parse(JSON.stringify(wrongList)));
 
@@ -1911,7 +1910,6 @@
                     nextBtn.innerText = "下一個";
                     nextBtn.removeEventListener('click', startReviewWrong); 
                     nextBtn.addEventListener('click', nextProb); 
-
 
                     $.getJSON(jsonPath)
                         .done(function (jsonData) {
@@ -1937,7 +1935,107 @@
                 };
             }
 
-            document.getElementById("startAllGame").addEventListener("click", createStartHandler("./all.json"));
+            function createAllGameHandler() {
+                return async function () {
+                    console.log("[createAllGameHandler] Starting all games");
+                    
+                    const nameInputVal = document.getElementById("playerName").value.trim();
+                    if (!nameInputVal) {
+                        showAlertModal("請先輸入玩家名稱！");
+                        document.getElementById("playerName").focus();
+                        window.gameplayActive = false; 
+                        return;
+                    }
+                    window.currentPlayer = nameInputVal;
+                    localStorage.setItem("parasite_player_name", nameInputVal);
+                    window.gameplayActive = true;
+                    console.log("[createAllGameHandler] Set window.gameplayActive to true");
+
+                    document.querySelector('.start-screen').style.display = 'none'; 
+                    document.querySelector('.flashcard-container').style.display = 'flex';
+
+                    state = 1;
+                    correct = 0; wrong = 0; total = 0; 
+                    console.log("[createAllGameHandler] Resetting scores and lists. Correct:", correct, "Wrong:", wrong);
+                    document.getElementById("correct").innerHTML = correct;
+                    document.getElementById("wrong").innerHTML = wrong;
+                    updateScoreDisplay();
+                    correctList = []; wrongList = [];
+                    console.log("[createAllGameHandler] Cleared correctList:", JSON.parse(JSON.stringify(correctList)), "wrongList:", JSON.parse(JSON.stringify(wrongList)));
+
+                    const nextBtn = document.getElementById('next');
+                    nextBtn.innerText = "下一個";
+                    nextBtn.removeEventListener('click', startReviewWrong); 
+                    nextBtn.addEventListener('click', nextProb); 
+
+                    try {
+                        // 獲取所有JSON文件
+                        const jsonFiles = await getAllJsonFiles();
+                        console.log("[createAllGameHandler] Found JSON files:", jsonFiles);
+                        
+                        if (jsonFiles.length === 0) {
+                            throw new Error("No JSON files found in directory");
+                        }
+
+                        // 合併所有JSON數據
+                        const allData = [];
+                        for (const file of jsonFiles) {
+                            try {
+                                const fileData = await $.getJSON(`./${file}`);
+                                if (Array.isArray(fileData)) {
+                                    allData.push(...fileData);
+                                }
+                                console.log(`[createAllGameHandler] Loaded ${fileData.length} items from ${file}`);
+                            } catch (error) {
+                                console.warn(`[createAllGameHandler] Failed to load ${file}:`, error);
+                            }
+                        }
+
+                        if (allData.length === 0) {
+                            throw new Error("No valid data loaded from any JSON files");
+                        }
+
+                        data = allData;
+                        numOfProbs = data.length;
+                        data = parseMultiAns(data);
+                        done = new Array(numOfProbs).fill(false);
+                        console.log("[createAllGameHandler] All data loaded. numOfProbs:", numOfProbs, "Initial done array:", JSON.parse(JSON.stringify(done)));
+                        startGame();
+                    } catch (error) {
+                        console.error("Error loading all JSON files:", error);
+                        showAlertModal("無法讀取遊戲資料");
+                        window.gameplayActive = false;
+                    }
+                };
+            }
+
+            async function getAllJsonFiles() {
+                // 已知的JSON文件列表（基於項目結構）
+                const MidtermJsonFiles = ['b07.json', 'apple.json'];
+                
+                // 嘗試動態獲取文件列表
+                try {
+                    // 使用fetch嘗試獲取目錄列表（如果服務器支持）
+                    const response = await fetch('./');
+                    if (response.ok) {
+                        const html = await response.text();
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const links = doc.querySelectorAll('a[href$=".json"]');
+                        const jsonFiles = Array.from(links).map(link => link.getAttribute('href'));
+                        if (jsonFiles.length > 0) {
+                            return jsonFiles;
+                        }
+                    }
+                } catch (error) {
+                    console.log("[getAllJsonFiles] Could not dynamically fetch file list, using known files");
+                }
+                
+                // 如果動態獲取失敗，返回已知的JSON文件
+                return MidtermJsonFiles;
+            }
+
+            document.getElementById("startAllGame").addEventListener("click", createAllGameHandler());
 
             const dropdownItems = document.querySelectorAll(".dropdown-item");
             dropdownItems.forEach(item => {
