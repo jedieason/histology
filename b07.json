@@ -1,0 +1,343 @@
+[
+  {
+    "num": "10701",
+    "path": "10701.png",
+    "answer": [
+      "B",
+      "Eosinophil"
+    ],
+    "explanation": "Eosinophil的細胞核裂成2葉，於LM下可見紅色大顆的specific granule；於EM下可見azurophilic granule與specific granule，其中specific granule中可見electron-dense的crystalloid body。\n【出處】共筆 Vol.3 P.9, 28",
+    "description": "組織名稱及深紅色線之名稱？"
+  },
+  {
+    "num": "10702",
+    "path": "10702.png",
+    "answer": [
+      "Choroid plexus",
+      "fenestrated capillary"
+    ],
+    "explanation": "圖中圈選的組織散布在空腔內，如一串葡萄的形狀，為choroid plexus，緊密排列的ependymal cells包著fenestrated vessels與loose CNT。\n【出處】07共筆 Vol.8 P.21, 40",
+    "description": "寫出箭頭所指範圍內的整個構造名稱？"
+  },
+  {
+    "num": "10703",
+    "path": "10703.png",
+    "answer": [
+      "Apocrine",
+      "myoepithelial cell"
+    ],
+    "explanation": "Apocrine sweat gland中每顆細胞的頂端都好像有一顆東西要跑出來，管徑比merocrine sweat gland的duct portion要來的大。Apocrine sweat gland分泌的地方就是它的管道，所以每一個管道的外面都圍著一圈比較粉紅色的myoepithelial cell。\n【出處】07共筆 Vol.9 P.38",
+    "description": "下圖是由哪種顯微鏡所得之影像？藍色虛線範圍內為何種胞器？"
+  },
+  {
+    "num": "10704",
+    "path": "10704.png",
+    "answer": [
+      "Nuchal ligament",
+      "elastic ligament"
+    ],
+    "explanation": "Elastic fiber呈紫紅色，此處較一般常見的 elastic fiber 更粗，是特化的結果，為nuchal ligament的主要結構，不要誤認為collagen fiber。在這些纖維之間可以看到扁圓形，呈黑紫色之fibroblast細胞核。\n【出處】共筆 Vol.4 P.37",
+    "description": "箭號所指細胞名稱？"
+  },
+  {
+    "num": "10705",
+    "path": "10705.png",
+    "answer": [
+      "White adipose tissue",
+      "osmic acid"
+    ],
+    "explanation": "脂肪組織可被osmic acid（鋨酸）利用滲透作用固定，並被染成黑色或棕黑色，可完整保存。切片周圍的脂肪細胞固定較佳，靠近中央的因固定液不易滲透而留下空泡。\n【出處】共筆 Vol.4 P.41",
+    "description": "下圖白血球的細胞名稱？"
+  },
+  {
+    "num": "10706",
+    "path": "10706.png",
+    "answer": [
+      "Junctional complex",
+      "terminal bar"
+    ],
+    "explanation": "Terminal bar (LM) = Junctional complex (EM) = Tight junction (ZO) + Intermediate junction (ZA) + Desmosome (MA)\n【出處】共筆 Vol.2 P.25",
+    "description": "箭頭所指是何種組織？出現在哪一系統？"
+  },
+  {
+    "num": "10707",
+    "path": "10707.png",
+    "answer": [
+      "Multivesicular body",
+      "MVB"
+    ],
+    "explanation": "Multivesicular body（MVB）是lysosome的前身。MVB是late endosome表面膜向內凹陷形成的許多vesicle，電顯下內含許多小泡（intraluminal vesicle，ILV），最後皆會被分解。小的MVB會和其他的MVB fusion在一起越變越大。\n【出處】共筆 Vol.1 P.32",
+    "description": "下圖是何種組織？使用哪種染色方式？"
+  },
+  {
+    "num": "10708",
+    "path": "10708.png",
+    "answer": [
+      "Motor neuron",
+      "silver stain"
+    ],
+    "explanation": "此片為silver stain，在H&E stain下沒辦法將neuron process染的清楚，故silver stain染色重點在於process。可見perineuronal space。\n【出處】07共筆 Vol.7 P.36",
+    "description": "寫出Ａ層之名稱與Ａ層之組織名稱？"
+  },
+  {
+    "num": "10709",
+    "path": "10709.png",
+    "answer": [
+      "Basal body",
+      "TEM"
+    ],
+    "explanation": "箭頭處之上為motile cilia，具有9×2+2的微管構造，而basal body具有9×3+0的微管構造。\n【出處】共筆 Vol.1 P.45",
+    "description": "箭頭所指細胞名稱？"
+  },
+  {
+    "num": "10710",
+    "path": "10710.png",
+    "answer": [
+      "Stratified cuboidal epithelium",
+      "duct portion of merocrine sweat gland"
+    ],
+    "explanation": "圖中腺體可見到較小的管腔，細胞排列整齊且較為深染，一旁的脂肪細胞較少，可判斷為eccrine （merocrine） sweat gland。而eccrine （merocrine） sweat gland又可分為secretory portion及duct portion：\nSecretory portion（視野中央）：細胞較大，排列較不規則，cytosol淡染。周圍會有一圈較深染的myoepithelial cells，可將汗液擠到管道中。\nDuct portion（紅圈處）：細胞較cuboid，較小，排列較整齊，cytosol較深染。\n【出處】07共筆 Vol.9 P.37",
+    "description": "寫出箭頭所指細胞名稱？"
+  },
+  {
+    "num": "10711",
+    "path": "10711.png",
+    "answer": [
+      "Muscle spindle"
+    ],
+    "explanation": "可見紡錘狀spindle，被肌纖維夾住 ，在muscle fiber間有\n紡錘形膨大的構造。\n【出處】07共筆 Vol.7 P.45",
+    "description": "A、B的組織名稱？（不要理黃圈圈）"
+  },
+  {
+    "num": "10712",
+    "path": "10712.png",
+    "answer": [
+      "Motor end plate"
+    ],
+    "explanation": "可見nerve fiber末端接近muscle fiber的部分有橢圓形的構造，為motor end plate。\n【出處】07共筆 Vol.7 P.45",
+    "description": "框框組織名稱？"
+  },
+  {
+    "num": "10713",
+    "path": "10713.png",
+    "answer": [
+      "D",
+      "Neutrophil"
+    ],
+    "explanation": "Neutrophil在LM下可見細胞質有染色顆粒，為顆粒球，且核分裂成多葉；在EM下可見3~5葉的細胞核，內有深染的heterochromatin，細胞質有深色azurophilic granules和顏色較淺、尺寸較小的specific granules，可觀察到偽足。\n【出處】共筆 Vol.3 P.7, 28",
+    "description": "黃色箭頭所指構造名稱？（不要理右下紅色圈圈）"
+  },
+  {
+    "num": "10714",
+    "path": "10714.png",
+    "answer": [
+      "C",
+      "Basophil"
+    ],
+    "explanation": "Basophil較紅血球大，在LM下整顆血球充滿染成藍紫色的顆粒，幾乎無法看見細胞核；在EM下可見azurophilic granule及顆粒大、圓，且整顆electron-dense的specific granules。\n【出處】共筆 Vol.3 P.10, 28",
+    "description": "箭頭所指細胞名稱？"
+  },
+  {
+    "num": "10715",
+    "path": "10715.png",
+    "answer": [
+      "Vena cava"
+    ],
+    "explanation": "可以分出最薄的tunica intima（epithelium）、層數少有環走smooth muscle的tunica media和最厚的tunica adventitia（縱走橫切）。tunica adventitia比tunica media厚非常多。\n【出處】07共筆 Vol.10 P.54",
+    "description": "Ａ：寫出範圍內深色顆粒名稱？Ｂ：視野下屬於薄皮膚或厚皮膚？"
+  },
+  {
+    "num": "10716",
+    "path": "10716.png",
+    "answer": [
+      "Simple columnar epithelium with microvilli and goblet cell"
+    ],
+    "explanation": "細胞核都位於底層，所以判斷為simple columnar epithelium，除此之外可見一顆一顆顏色很淡，似泡泡狀的goblet cell，細胞核靠管腔外側。內側有地毯狀的構造，為microvilli。\n【出處】共筆 Vol.2 P.5; Vol.3 P.18",
+    "description": "上下分別爲何種組織？"
+  },
+  {
+    "num": "10717",
+    "path": "10717.png",
+    "answer": [
+      "Sympathetic ganglion"
+    ],
+    "explanation": "此為高倍率下的sympathetic ganglion。細胞核大，內有深色核仁，是eccentric nuclei，核會偏一邊，不會在中央。Neuron外有些許顆粒狀的satellite cell，核圓形，深染。因為sympathetic ganglion是multipolar neuron，其細胞會伸出很多process，所以satellite cell排列不會像spinal ganglion那樣緊密。和Motor neuron cell一樣有Nissl body，但較為細緻平均也不會形成塊狀。\n與spinal ganglion（DRG neuron）比較：Sympathetic ganglion的process會和fiber混雜，DRG則明顯分開。DRG的Satellite cell排列緊密；Sympathetic ganglion的不會。\n【出處】07共筆 Vol.7 P.27, 38",
+    "description": "箭頭所指是何種細胞？（silver stain）"
+  },
+  {
+    "num": "10718",
+    "path": "10718.png",
+    "answer": [
+      "Plasma cell",
+      "TEM"
+    ],
+    "explanation": "圖中細胞核偏一邊，細胞質增多的那一側呈空泡狀，可能為\nGolgi apparatus 的 negative stain(HE stain 下的狀況)，推測為\n大量分泌蛋白質的細胞。另外，細胞核呈現車輪狀，外圍為\n深染的 heterochromatin，中間為核仁,之間的淺色區域為\neuchromatin。而綜合以上特徵，可判斷為漿細胞。\n【出處】共筆 Vol.3 P.12",
+    "description": "箭頭所指構造名稱？"
+  },
+  {
+    "num": "10719",
+    "path": "10719.png",
+    "answer": [
+      "Intramembranous ossification"
+    ],
+    "explanation": "外側是結締組織periosteum，裡面是骨髓腔，可見有許多正在形成的骨頭。視野可見骨小針（bone spicules）、骨小樑（bone trabeculae）會逐漸增厚，之後互相癒合，形成完整的一塊compact bone。\n【出處】07共筆 Vol.6 P.50",
+    "description": "Ａ、Ｂ各位於皮膚何處？"
+  },
+  {
+    "num": "10720",
+    "path": "10720.png",
+    "answer": [
+      "Purkinje cell"
+    ],
+    "explanation": "圖中箭頭所指的細胞較大、顏色偏紅，細胞呈現錐狀，可看\n到細胞有許多process往外伸，為Purkinje cell 的特徵。\n【出處】07共筆 Vol.8 P.26",
+    "description": "紫色細絲（紅箭頭）與粉紅色絲狀物（藍箭頭）的構造名稱？"
+  },
+  {
+    "num": "10721",
+    "path": "10721.png",
+    "answer": [
+      "手腳掌",
+      "Meissner's corpuscle"
+    ],
+    "explanation": "此組織為thick skin，可見視野上方stratum granulosum與下方stratum corneum之間有顏色不同的stratum lucidum（本圖不明顯），並可見很厚的角質層。於epidermis和dermis交界處的dermal papilla中可以觀察到橢圓形的結構，裡頭有橫走的fiber，主要有Schwann cell組成，細胞排列方向通常與corpuscle的長軸垂直。Meissner's corpuscle在指腹、指尖最容易看見，在皮膚表面用來感受觸覺。\n【出處】07共筆 Vol.9 P.7, 32, 48",
+    "description": "箭頭所指構造名稱？"
+  },
+  {
+    "num": "10722",
+    "path": "10722.png",
+    "answer": [
+      "Muscular artery"
+    ],
+    "explanation": "和vein的差別是tunica media很厚，和elastic artery的差別在intima的subendothelial CNT很薄，media的elastin比較少，smooth muscle多，其實看管徑大小差很多就知道了。\n【出處】07共筆 Vol.10 P.49, 50",
+    "description": "分別寫出Ａ及Ｂ之組織名稱？（傳下來的影片畫質太差…也找不到其他相似圖片）"
+  },
+  {
+    "num": "10723",
+    "path": "10723.png",
+    "answer": [
+      "B",
+      "cardiac muscle cell"
+    ],
+    "explanation": "此為cardiac muscle的縱切面（l.s.），可以用只有心肌才有的心間盤（intercalated disc）來辨別。心肌在高倍下可見明顯橫紋，橢圓細胞核位於細胞中央，細胞有分岔。\n與skeletal muscle比較：心肌細胞排列沒有那麼緻密，也不會像骨骼肌那麼整齊。\n【出處】共筆 Vol.2 P.59, 79",
+    "description": "分別寫出Ａ及Ｂ之組織名稱？"
+  },
+  {
+    "num": "10724",
+    "path": "10724.png",
+    "answer": [
+      "A",
+      "noncornified stratified squamous epithelium",
+      "B",
+      "Dense irregular connective tissue"
+    ],
+    "explanation": "(A) 多層細胞，越上面越扁平，最表面一層為 squamous，且表面無角質化，所以是 noncornified stratified squamous epithelium。\n(B) 分布在表皮下方的真皮（dermis）。Fiber 排列緊密但不規則，有各種走向。\n【出處】共筆 Vol.2 P.9, Vol.4 P.35",
+    "description": "箭頭所指區域名稱？此構造發生於何處？"
+  },
+  {
+    "num": "10725",
+    "path": "10725.png",
+    "answer": [
+      "Peroxisome",
+      "TEM"
+    ],
+    "explanation": "此胞器內有個結晶，為peroxisome的特徵。Urate oxidase在老鼠和許多非人類物種的peroxisome會形成crystalloid inclusion結晶沈澱，產生類核nucleoid，不過在人類沒有。\n【出處】共筆 Vol.1 P.33",
+    "description": "分別寫出黃色與藍色箭頭所指區域之構造名稱？"
+  },
+  {
+    "num": "10726",
+    "path": "10726.png",
+    "answer": [
+      "Fenestrated capillary"
+    ],
+    "explanation": "電顯照片中，僅一層細胞圍成一個腔，應為微血管。此圖中可見微血管的內皮細胞出現許多孔洞，造成管壁在EM下呈現凹凸不平的樣子，為fenestrated capillary的特徵。\n【出處】07共筆 Vol.10 P.34",
+    "description": "哪一個區域是灰質？"
+  },
+  {
+    "num": "10727",
+    "path": "10727.png",
+    "answer": [
+      "Purkinje fiber"
+    ],
+    "explanation": "較心肌細胞大，核與核間距較大，較淡染（因myofibril少，glycogen多）\n【出處】共筆 Vol.2 p.82",
+    "description": "箭頭所指細胞名稱？"
+  },
+  {
+    "num": "10728",
+    "path": "10728.png",
+    "answer": [
+      "Eosinophil",
+      "TEM"
+    ],
+    "explanation": "Eosinophil的細胞核裂成2葉，可見azurophilic granule與specific granule，其中specific granule中可見electron-dense的crystalloid body。\n【出處】共筆 Vol.3 P.9, 28",
+    "description": "分別寫出左右兩邊組織名稱？"
+  },
+  {
+    "num": "10729",
+    "path": "10729.png",
+    "answer": [
+      "Osteoclast"
+    ],
+    "explanation": "圍繞在硬骨組織的骨小針周遭，體型較大，頂部多核，細胞被染成比較紅的顏色。\n【出處】07共筆 Vol.6 P.26",
+    "description": "視野範圍的組織名稱？（silver stain）（不要理紅箭頭）"
+  },
+  {
+    "num": "10730",
+    "path": "10730.png",
+    "answer": [
+      "Schwann cell and satellite cell"
+    ],
+    "explanation": "圓形的細胞本體，核位於中央，旁邊有很多satellite cells，neural fiber和細胞本體壁壘分明，可見視野中組織為dorsal root ganglion。而dorsal root ganglion中存在的neuroglial cell即為包圍神經細胞本體的satellite cell及包覆軸突的Schwann cell。\n【出處】07共筆 Vol.7 P.39-40",
+    "description": "上下分別為何種組織？"
+  },
+  {
+    "num": "10731",
+    "path": "10731.png",
+    "answer": [
+      "hair follicle",
+      "external root sheath",
+      "深層"
+    ],
+    "explanation": "Hair follicle的bulb在水平向可看見六個分層。且越深層越大一圈。\n【出處】07共筆 Vol.9 P.41",
+    "description": "染上紅色的細胞名稱？將染劑由藍轉紅的特性為何？"
+  },
+  {
+    "num": "10732",
+    "path": "10732.png",
+    "answer": [
+      "Skeletal muscle",
+      "succinate dehydrogenase histochemical staining"
+    ],
+    "explanation": "圖片針對三種muscle fiber中mitochondria的多寡所造成succinate dehydrogenase含量的不同而進行histochemical staining。\n從上圖中可看出三種不同的muscle fiber：\n較深染者為aerobic fibers\n較淡染者為intermediate fibers\n接近白色的為anaerobic fibers\n【出處】共筆 Vol.2 P.56",
+    "description": "箭頭所指構造？"
+  },
+  {
+    "num": "10733",
+    "path": "10733.png",
+    "answer": [
+      "Gap junction"
+    ],
+    "explanation": "此為平滑肌的縱切面（l.s.）。細胞呈紡錘狀，沒有橫紋，細胞核深染位於細胞中央，且具有明顯的點狀chromatin granule。而平滑肌只有 gap junction。\n【出處】共筆 Vol.2 P.66, 70",
+    "description": "紅色箭頭所指構造名稱？此構造所在的層次名稱？"
+  },
+  {
+    "num": "10734",
+    "path": "10734.png",
+    "answer": [
+      "Pseudostratified ciliated columnar epithelium"
+    ],
+    "explanation": "看似多層細胞，但其實細胞均位於basement membrane上，可知道是pseudostratified columnar epithelium，其上可見一根根的構造，因判斷為cilia（microvilli只會是地毯狀）。答案亦可寫Pseudostratified columnar epithelium with cilia。\n【出處】共筆 Vol.2 P.7; Vol.3 P.20",
+    "description": "箭頭所指構造名稱？"
+  },
+  {
+    "num": "10735",
+    "path": "10735.png",
+    "answer": [
+      "Hyaline cartilage",
+      "articular cartilage",
+      "interstitial growth & appositional growth"
+    ],
+    "explanation": "H&E 染色下外層有紅色perichondrium，淡紫色的透明軟骨內\n有許多小空洞lacunae，空洞內有chondrocytes，三四個聚集\n為田字型isogenic group。\nAppositional growth：新軟骨細胞由 inner cellular layer 外側向內生成。\nInterstitial growth：軟骨細胞可在lacuna 中自行增生，增生後同lacuna一整團稱為isogenic group或isogenous group。\n【出處】07共筆 Vol.6 P.6, 7",
+    "description": "黃色箭頭所指細胞名稱？（不要理紅箭頭）"
+  }
+]
+
