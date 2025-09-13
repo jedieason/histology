@@ -1,7 +1,7 @@
 [
   {
     "num": "08201",
-    "path": "08201.png",
+    "path": "b08lab/08201.png",
     "answer": [
       "Volkmann’s canal"
     ],
@@ -10,7 +10,7 @@
   },
   {
     "num": "08202",
-    "path": "08202.png",
+    "path": "b08lab/08202.png",
     "answer": [
       "Bone",
       "decalcified"
@@ -20,7 +20,7 @@
   },
   {
     "num": "08203",
-    "path": "08203.png",
+    "path": "b08lab/08203.png",
     "answer": [
       "Reticular tissue",
       "silver stain"
@@ -30,7 +30,7 @@
   },
   {
     "num": "08204",
-    "path": "08204.png",
+    "path": "b08lab/08204.png",
     "answer": [
       "C",
       "Basophil"
@@ -40,7 +40,7 @@
   },
   {
     "num": "08205",
-    "path": "08205.png",
+    "path": "b08lab/08205.png",
     "answer": [
       "D",
       "Neutrophil"
@@ -50,7 +50,7 @@
   },
   {
     "num": "08206",
-    "path": "08206.png",
+    "path": "b08lab/08206.png",
     "answer": [
       "B",
       "Eosinophil"
@@ -60,7 +60,7 @@
   },
   {
     "num": "08207",
-    "path": "08207.png",
+    "path": "b08lab/08207.png",
     "answer": [
       "Purkinje cell"
     ],
@@ -69,7 +69,7 @@
   },
   {
     "num": "08208",
-    "path": "08208.png",
+    "path": "b08lab/08208.png",
     "answer": [
       "Choroid plexus"
     ],
@@ -78,7 +78,7 @@
   },
   {
     "num": "08209",
-    "path": "08209.png",
+    "path": "b08lab/08209.png",
     "answer": [
       "Heterochromatin"
     ],
@@ -87,7 +87,7 @@
   },
   {
     "num": "08210",
-    "path": "08210.png",
+    "path": "b08lab/08210.png",
     "answer": [
       "Elastic artery"
     ],
@@ -96,7 +96,7 @@
   },
   {
     "num": "08211",
-    "path": "08211.png",
+    "path": "b08lab/08211.png",
     "answer": [
       "Simple columnar epithelium with microvilli and goblet cell"
     ],
@@ -105,7 +105,7 @@
   },
   {
     "num": "08212",
-    "path": "08212.png",
+    "path": "b08lab/08212.png",
     "answer": [
       "Transitional epithelium",
       "urinary system"
@@ -115,7 +115,7 @@
   },
   {
     "num": "08213",
-    "path": "08213.png",
+    "path": "b08lab/08213.png",
     "answer": [
       "Lysosome"
     ],
@@ -124,7 +124,7 @@
   },
   {
     "num": "08214",
-    "path": "08214.png",
+    "path": "b08lab/08214.png",
     "answer": [
       "Nuchal ligament"
     ],
@@ -133,7 +133,7 @@
   },
   {
     "num": "08215",
-    "path": "08215.png",
+    "path": "b08lab/08215.png",
     "answer": [
       "Golgi apparatus"
     ],
@@ -142,7 +142,7 @@
   },
   {
     "num": "08216",
-    "path": "08216.png",
+    "path": "b08lab/08216.png",
     "answer": [
       "Pseudostratified columnar epithelium with cilia"
     ],
@@ -151,7 +151,7 @@
   },
   {
     "num": "08217",
-    "path": "08217.png",
+    "path": "b08lab/08217.png",
     "answer": [
       "Large vein"
     ],
@@ -160,7 +160,7 @@
   },
   {
     "num": "08218",
-    "path": "08218.png",
+    "path": "b08lab/08218.png",
     "answer": [
       "Tendon",
       "dense regular connective tissue"
@@ -170,7 +170,7 @@
   },
   {
     "num": "08219",
-    "path": "08219.png",
+    "path": "b08lab/08219.png",
     "answer": [
       "Glycocalyx"
     ],
@@ -179,7 +179,7 @@
   },
   {
     "num": "08220",
-    "path": "08220.png",
+    "path": "b08lab/08220.png",
     "answer": [
       "Osteoclast"
     ],
@@ -188,7 +188,7 @@
   },
   {
     "num": "08221",
-    "path": "08221.png",
+    "path": "b08lab/08221.png",
     "answer": [
       "Muscle spindle"
     ],
@@ -197,7 +197,7 @@
   },
   {
     "num": "08222",
-    "path": "08222.png",
+    "path": "b08lab/08222.png",
     "answer": [
       "Stratified cuboidal epithelium",
       "duct portion of merocrine sweat gland"
@@ -207,7 +207,7 @@
   },
   {
     "num": "08223",
-    "path": "08223.png",
+    "path": "b08lab/08223.png",
     "answer": [
       "Motor neuron",
       "silver stain"
@@ -217,7 +217,7 @@
   },
   {
     "num": "08224",
-    "path": "08224.png",
+    "path": "b08lab/08224.png",
     "answer": [
       "Fenestrated capillary"
     ],
@@ -226,7 +226,7 @@
   },
   {
     "num": "08225",
-    "path": "08225.png",
+    "path": "b08lab/08225.png",
     "answer": [
       "Pseudostratified columnar epithelium with stereocilia"
     ],
@@ -235,7 +235,7 @@
   },
   {
     "num": "08226",
-    "path": "08226.png",
+    "path": "b08lab/08226.png",
     "answer": [
       "Pseudounipolar neuron"
     ],
@@ -244,7 +244,7 @@
   },
   {
     "num": "08227",
-    "path": "08227.png",
+    "path": "b08lab/08227.png",
     "answer": [
       "Nail bed"
     ],
@@ -253,7 +253,7 @@
   },
   {
     "num": "08228",
-    "path": "08228.png",
+    "path": "b08lab/08228.png",
     "answer": [
       "Meissner’s corpuscle"
     ],
@@ -262,7 +262,7 @@
   },
   {
     "num": "08229",
-    "path": "08229.png",
+    "path": "b08lab/08229.png",
     "answer": [
       "Fenestrated capillary"
     ],
@@ -271,7 +271,7 @@
   },
   {
     "num": "08230",
-    "path": "08230.png",
+    "path": "b08lab/08230.png",
     "answer": [
       "Smooth muscle"
     ],
