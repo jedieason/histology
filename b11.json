@@ -1,7 +1,7 @@
 [
   {
     "num": "11101",
-    "path": "11101.png",
+    "path": "b11/11101.png",
     "answer": [
       "Aorta",
       "Elastic artery"
@@ -11,7 +11,7 @@
   },
   {
     "num": "11102",
-    "path": "11102.png",
+    "path": "b11/11102.png",
     "answer": [
       "Purkinje neuron",
       "cell"
@@ -21,7 +21,7 @@
   },
   {
     "num": "11103",
-    "path": "11103.png",
+    "path": "b11/11103.png",
     "answer": [
       "Lymphocyte"
     ],
@@ -30,7 +30,7 @@
   },
   {
     "num": "11104",
-    "path": "11104.png",
+    "path": "b11/11104.png",
     "answer": [
       "Pseudostratified columnar epithelium with cilia"
     ],
@@ -39,7 +39,7 @@
   },
   {
     "num": "11105",
-    "path": "11105.png",
+    "path": "b11/11105.png",
     "answer": [
       "Desmosome"
     ],
@@ -48,7 +48,7 @@
   },
   {
     "num": "11106",
-    "path": "11106.png",
+    "path": "b11/11106.png",
     "answer": [
       "Simple columnar epithelium with goblet cells and microvilli"
     ],
@@ -57,7 +57,7 @@
   },
   {
     "num": "11107",
-    "path": "11107.png",
+    "path": "b11/11107.png",
     "answer": [
       "Cardiac muscle"
     ],
@@ -66,7 +66,7 @@
   },
   {
     "num": "11108",
-    "path": "11108.png",
+    "path": "b11/11108.png",
     "answer": [
       "Motor end plate"
     ],
@@ -75,7 +75,7 @@
   },
   {
     "num": "11109",
-    "path": "11109.png",
+    "path": "b11/11109.png",
     "answer": [
       "Continuous capillary"
     ],
@@ -84,7 +84,7 @@
   },
   {
     "num": "11110",
-    "path": "11110.png",
+    "path": "b11/11110.png",
     "answer": [
       "Mast cell",
       "Metachromasia"
@@ -94,7 +94,7 @@
   },
   {
     "num": "11111",
-    "path": "11111.png",
+    "path": "b11/11111.png",
     "answer": [
       "Monocyte"
     ],
@@ -103,7 +103,7 @@
   },
   {
     "num": "11112",
-    "path": "11112.png",
+    "path": "b11/11112.png",
     "answer": [
       "Succinate dehydrogenase",
       "Skeletal muscle"
@@ -113,7 +113,7 @@
   },
   {
     "num": "11113",
-    "path": "11113.png",
+    "path": "b11/11113.png",
     "answer": [
       "Brown adipose tissue"
     ],
@@ -122,7 +122,7 @@
   },
   {
     "num": "11114",
-    "path": "11114.png",
+    "path": "b11/11114.png",
     "answer": [
       "Perichondrium"
     ],
@@ -131,7 +131,7 @@
   },
   {
     "num": "11115",
-    "path": "11115.png",
+    "path": "b11/11115.png",
     "answer": [
       "Muscle Spindle"
     ],
@@ -140,7 +140,7 @@
   },
   {
     "num": "11116",
-    "path": "11116.png",
+    "path": "b11/11116.png",
     "answer": [
       "Elastic ligament",
       "ligamentum nuchae"
@@ -150,7 +150,7 @@
   },
   {
     "num": "11117",
-    "path": "11117.png",
+    "path": "b11/11117.png",
     "answer": [
       "Endochondral ossification"
     ],
@@ -159,7 +159,7 @@
   },
   {
     "num": "11118",
-    "path": "11118.png",
+    "path": "b11/11118.png",
     "answer": [
       "Medium-size vein"
     ],
@@ -168,7 +168,7 @@
   },
   {
     "num": "11119",
-    "path": "11119.png",
+    "path": "b11/11119.png",
     "answer": [
       "Outer circumferential lamellae",
       "Decalcified Bone"
@@ -178,7 +178,7 @@
   },
   {
     "num": "11120",
-    "path": "11120.png",
+    "path": "b11/11120.png",
     "answer": [
       "Ependymal Cell"
     ],
@@ -187,7 +187,7 @@
   },
   {
     "num": "11121",
-    "path": "11121.png",
+    "path": "b11/11121.png",
     "answer": [
       "Reticular Fiber",
       "silver Stain"
@@ -197,7 +197,7 @@
   },
   {
     "num": "11122",
-    "path": "11122.png",
+    "path": "b11/11122.png",
     "answer": [
       "Smooth muscle cell"
     ],
@@ -206,7 +206,7 @@
   },
   {
     "num": "11123",
-    "path": "11123.png",
+    "path": "b11/11123.png",
     "answer": [
       "Osteoclast"
     ],
@@ -215,7 +215,7 @@
   },
   {
     "num": "11124",
-    "path": "11124.png",
+    "path": "b11/11124.png",
     "answer": [
       "Neutrophil"
     ],
@@ -224,7 +224,7 @@
   },
   {
     "num": "11125",
-    "path": "11125.png",
+    "path": "b11/11125.png",
     "answer": [
       "Schwann cell",
       "Satellite cell"
@@ -234,7 +234,7 @@
   },
   {
     "num": "11126",
-    "path": "11126.png",
+    "path": "b11/11126.png",
     "answer": [
       "Heterochromatin"
     ],
@@ -243,7 +243,7 @@
   },
   {
     "num": "11127",
-    "path": "11127.png",
+    "path": "b11/11127.png",
     "answer": [
       "Collagen fiber"
     ],
@@ -252,7 +252,7 @@
   },
   {
     "num": "11128",
-    "path": "11128.png",
+    "path": "b11/11128.png",
     "answer": [
       "Basophil"
     ],
@@ -261,7 +261,7 @@
   },
   {
     "num": "11129",
-    "path": "11129.png",
+    "path": "b11/11129.png",
     "answer": [
       "Nuclear pore"
     ],
@@ -270,7 +270,7 @@
   },
   {
     "num": "11130",
-    "path": "11130.png",
+    "path": "b11/11130.png",
     "answer": [
       "Muscular artery",
       "Medium-size artery"
@@ -280,7 +280,7 @@
   },
   {
     "num": "11131",
-    "path": "11131.png",
+    "path": "b11/11131.png",
     "answer": [
       "Golgi apparatus"
     ],
@@ -289,7 +289,7 @@
   },
   {
     "num": "11132",
-    "path": "11132.png",
+    "path": "b11/11132.png",
     "answer": [
       "Dense irregular connective tissue"
     ],
@@ -298,7 +298,7 @@
   },
   {
     "num": "11133",
-    "path": "11133.png",
+    "path": "b11/11133.png",
     "answer": [
       "Motor neuron",
       "Multipolar neuron"
@@ -308,7 +308,7 @@
   },
   {
     "num": "11134",
-    "path": "11134.png",
+    "path": "b11/11134.png",
     "answer": [
       "Peroxisome"
     ],
@@ -317,7 +317,7 @@
   },
   {
     "num": "11135",
-    "path": "11135.png",
+    "path": "b11/11135.png",
     "answer": [
       "Sympathetic ganglion"
     ],
