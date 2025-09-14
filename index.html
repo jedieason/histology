@@ -1226,7 +1226,22 @@
       <div class="dropdown-menu">
           <button class="dropdown-toggle start-button">單元</button>
           <div class="dropdown-content">
-              <button class="dropdown-item" data-json="b07.json">B07考古</button>
+            <button class="dropdown-item" data-json="b11.json">B11 小考</button>
+            <button class="dropdown-item" data-json="b11lab.json">B11 實驗小考</button>
+            <button class="dropdown-item" data-json="b10.json">B10 小考</button>
+            <button class="dropdown-item" data-json="b10lab.json">B10 實驗小考</button>
+            <button class="dropdown-item" data-json="b09.json">B09 小考</button>
+            <button class="dropdown-item" data-json="b09lab.json">B09 實驗小考</button>
+            <button class="dropdown-item" data-json="b08.json">B08 小考</button>
+            <button class="dropdown-item" data-json="b08lab.json">B08 實驗小考</button>
+            <button class="dropdown-item" data-json="b07.json">B07 小考</button>
+            <button class="dropdown-item" data-json="b07lab.json">B07 實驗小考</button>
+            <button class="dropdown-item" data-json="b06.json">B06 小考</button>
+            <button class="dropdown-item" data-json="b06lab.json">B06 實驗小考</button>
+            <button class="dropdown-item" data-json="b05.json">B05 小考</button>
+            <button class="dropdown-item" data-json="b05lab.json">B05 實驗小考</button>
+            <button class="dropdown-item" data-json="b04.json">B04 小考</button>
+            <button class="dropdown-item" data-json="b04lab.json">B04 實驗小考</button>
           </div>
       </div>
       <button id="openDoc" class="start-button">題庫</button>
@@ -2011,8 +2026,24 @@
 
             async function getAllJsonFiles() {
                 // 已知的JSON文件列表（基於項目結構）
-                const MidtermJsonFiles = ['b07.json', 'apple.json'];
-                
+                const MidtermJsonFiles = [
+                  'b11.json',
+                  'b11lab.json',
+                  'b10.json',
+                  'b10lab.json',
+                  'b09.json',
+                  'b09lab.json',
+                  'b08.json',
+                  'b08lab.json',
+                  'b07.json',
+                  'b07lab.json',
+                  'b06.json',
+                  'b06lab.json',
+                  'b05.json',
+                  'b05lab.json',
+                  'b04.json',
+                  'b04lab.json'
+                ];
                 // 嘗試動態獲取文件列表
                 try {
                     // 使用fetch嘗試獲取目錄列表（如果服務器支持）
