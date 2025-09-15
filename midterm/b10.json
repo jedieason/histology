@@ -1,7 +1,7 @@
 [
   {
     "num": "10101",
-    "path": "b10/10101.png",
+    "path": "midterm-image/b10/10101.png",
     "answer": [
       "Motor end plate"
     ],
@@ -10,7 +10,7 @@
   },
   {
     "num": "10102",
-    "path": "b10/10102.png",
+    "path": "midterm-image/b10/10102.png",
     "answer": [
       "B"
     ],
@@ -19,7 +19,7 @@
   },
   {
     "num": "10103",
-    "path": "b10/10103.png",
+    "path": "midterm-image/b10/10103.png",
     "answer": [
       "Mixed bone",
       "Mixed trabeculae",
@@ -30,7 +30,7 @@
   },
   {
     "num": "10104",
-    "path": "b10/10104.png",
+    "path": "midterm-image/b10/10104.png",
     "answer": [
       "heterochromatin"
     ],
@@ -39,7 +39,7 @@
   },
   {
     "num": "10105",
-    "path": "b10/10105.png",
+    "path": "midterm-image/b10/10105.png",
     "answer": [
       "plasma cell",
       "分泌抗體"
@@ -49,7 +49,7 @@
   },
   {
     "num": "10106",
-    "path": "b10/10106.png",
+    "path": "midterm-image/b10/10106.png",
     "answer": [
       "A：white adipocyte",
       "B：brown adipocyte"
@@ -59,7 +59,7 @@
   },
   {
     "num": "10107",
-    "path": "b10/10107.png",
+    "path": "midterm-image/b10/10107.png",
     "answer": [
       "Node of Ranvier"
     ],
@@ -68,7 +68,7 @@
   },
   {
     "num": "10108",
-    "path": "b10/10108.png",
+    "path": "midterm-image/b10/10108.png",
     "answer": [
       "Nucleolus"
     ],
@@ -77,7 +77,7 @@
   },
   {
     "num": "10109",
-    "path": "b10/10109.png",
+    "path": "midterm-image/b10/10109.png",
     "answer": [
       "Pseudostratified columnar epithelium with stereo cilia"
     ],
@@ -86,7 +86,7 @@
   },
   {
     "num": "10110",
-    "path": "b10/10110.png",
+    "path": "midterm-image/b10/10110.png",
     "answer": [
       "choroid plexus"
     ],
@@ -95,7 +95,7 @@
   },
   {
     "num": "10111",
-    "path": "b10/10111.png",
+    "path": "midterm-image/b10/10111.png",
     "answer": [
       "basal body"
     ],
@@ -104,7 +104,7 @@
   },
   {
     "num": "10112",
-    "path": "b10/10112.png",
+    "path": "midterm-image/b10/10112.png",
     "answer": [
       "elastic membrane",
       "muscular artery"
@@ -114,7 +114,7 @@
   },
   {
     "num": "10113",
-    "path": "b10/10113.png",
+    "path": "midterm-image/b10/10113.png",
     "answer": [
       "Astrocyte"
     ],
@@ -123,7 +123,7 @@
   },
   {
     "num": "10114",
-    "path": "b10/10114.png",
+    "path": "midterm-image/b10/10114.png",
     "answer": [
       "Golgi apparatus"
     ],
@@ -132,7 +132,7 @@
   },
   {
     "num": "10115",
-    "path": "b10/10115.png",
+    "path": "midterm-image/b10/10115.png",
     "answer": [
       "Simple columnar epithelium with microvilli and goblet cells",
       "striated border"
@@ -142,7 +142,7 @@
   },
   {
     "num": "10116",
-    "path": "b10/10116.png",
+    "path": "midterm-image/b10/10116.png",
     "answer": [
       "Monocyte"
     ],
@@ -151,7 +151,7 @@
   },
   {
     "num": "10117",
-    "path": "b10/10117.png",
+    "path": "midterm-image/b10/10117.png",
     "answer": [
       "Multipolar neuron"
     ],
@@ -160,7 +160,7 @@
   },
   {
     "num": "10118",
-    "path": "b10/10118.png",
+    "path": "midterm-image/b10/10118.png",
     "answer": [
       "A:Dense irregular connective tissue",
       "B:Smooth muscle"
@@ -170,7 +170,7 @@
   },
   {
     "num": "10119",
-    "path": "b10/10119.png",
+    "path": "midterm-image/b10/10119.png",
     "answer": [
       "Fenestrated capillary"
     ],
@@ -179,7 +179,7 @@
   },
   {
     "num": "10120",
-    "path": "b10/10120.png",
+    "path": "midterm-image/b10/10120.png",
     "answer": [
       "Zone of proliferation"
     ],
@@ -188,7 +188,7 @@
   },
   {
     "num": "10121",
-    "path": "b10/10121.png",
+    "path": "midterm-image/b10/10121.png",
     "answer": [
       "External elastic lamella"
     ],
@@ -197,7 +197,7 @@
   },
   {
     "num": "10122",
-    "path": "b10/10122.png",
+    "path": "midterm-image/b10/10122.png",
     "answer": [
       "Basophil"
     ],
@@ -206,7 +206,7 @@
   },
   {
     "num": "10123",
-    "path": "b10/10123.png",
+    "path": "midterm-image/b10/10123.png",
     "answer": [
       "Intramembranous ossification"
     ],
@@ -215,7 +215,7 @@
   },
   {
     "num": "10124",
-    "path": "b10/10124.png",
+    "path": "midterm-image/b10/10124.png",
     "answer": [
       "Purkinje cell of cerebellum"
     ],
@@ -224,7 +224,7 @@
   },
   {
     "num": "10125",
-    "path": "b10/10125.png",
+    "path": "midterm-image/b10/10125.png",
     "answer": [
       "A:Skeletal muscle",
       "B:Tendon",
@@ -235,7 +235,7 @@
   },
   {
     "num": "10126",
-    "path": "b10/10126.png",
+    "path": "midterm-image/b10/10126.png",
     "answer": [
       "Large Vein"
     ],
@@ -244,7 +244,7 @@
   },
   {
     "num": "10127",
-    "path": "b10/10127.png",
+    "path": "midterm-image/b10/10127.png",
     "answer": [
       "Lymphocyte"
     ],
@@ -253,7 +253,7 @@
   },
   {
     "num": "10128",
-    "path": "b10/10128.png",
+    "path": "midterm-image/b10/10128.png",
     "answer": [
       "Stratified Cuboidal Epithelium"
     ],
@@ -262,7 +262,7 @@
   },
   {
     "num": "10129",
-    "path": "b10/10129.png",
+    "path": "midterm-image/b10/10129.png",
     "answer": [
       "Pseudostratified columnar epithelium with stereocilia"
     ],
@@ -271,7 +271,7 @@
   },
   {
     "num": "10130",
-    "path": "b10/10130.png",
+    "path": "midterm-image/b10/10130.png",
     "answer": [
       "A: skeletal muscle",
       "B: tendon"
@@ -281,7 +281,7 @@
   },
   {
     "num": "10131",
-    "path": "b10/10131.png",
+    "path": "midterm-image/b10/10131.png",
     "answer": [
       "A:cardiac muscle",
       "B:smooth muscle"
@@ -291,7 +291,7 @@
   },
   {
     "num": "10132",
-    "path": "b10/10132.png",
+    "path": "midterm-image/b10/10132.png",
     "answer": [
       "basal body",
       "Psudostratified columnar epithelium with cilia"
@@ -301,7 +301,7 @@
   },
   {
     "num": "10133",
-    "path": "b10/10133.png",
+    "path": "midterm-image/b10/10133.png",
     "answer": [
       "A:hyaline cartilage",
       "B:elastic cartilage"
@@ -311,7 +311,7 @@
   },
   {
     "num": "10134",
-    "path": "b10/10134.png",
+    "path": "midterm-image/b10/10134.png",
     "answer": [
       "tunica adventitia",
       "vasa vasorum"
@@ -321,7 +321,7 @@
   },
   {
     "num": "10135",
-    "path": "b10/10135.png",
+    "path": "midterm-image/b10/10135.png",
     "answer": [
       "A:cornified stratified squamous epithelium",
       "B:dense irregular CNT"
