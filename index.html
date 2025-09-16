@@ -1342,7 +1342,7 @@
                  loading="eager"
                  decoding="async"
                  fetchpriority="high"
-                 onload="this.classList.add('loaded'); document.querySelector('.loading-screen').style.display='none'; preloadNextImage();"
+                 onload="handleMainImageLoad(this);"
                  src=""
                  alt="Parasite Image">
         </div>
@@ -1466,6 +1466,10 @@
         var score = 0;
         var correctList = [];
         var wrongList = [];
+        let questionQueue = [];
+        const preloadedImagePaths = new Set();
+        const pendingPreloadMap = new Map();
+        const PRELOAD_AHEAD_COUNT = 3;
         const lowerCaseSwearWords = [
             "幹", "靠", "操", "媽的", "他媽的", "幹你娘", "機掰", "雞掰", "哭邀", "靠北", "靠腰",
             "操你媽", "王八蛋", "他媽", "賤人", "婊子", "俗辣", "垃圾", "智障", "白痴", "腦殘",
@@ -1534,6 +1538,66 @@
                 speechSynthesis.onvoiceschanged = () => {
                     availableVoices = speechSynthesis.getVoices();
                 };
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function resetPreloadState() {
+            questionQueue = [];
+            preloadedImagePaths.clear();
+            pendingPreloadMap.clear();
+        }
+
+        function initializeQuestionQueue() {
+            questionQueue = [];
+            if (!Array.isArray(data) || !Array.isArray(done)) {
+                return;
+            }
+            for (let i = 0; i < data.length; i++) {
+                if (!done[i]) {
+                    questionQueue.push(i);
+                }
+            }
+            if (questionQueue.length > 1) {
+                shuffleArray(questionQueue);
+            }
+            preloadUpcomingImages();
+        }
+
+        function preloadImageAtIndex(index) {
+            if (!data || !data[index]) return;
+            const path = data[index]?.path;
+            if (!path || preloadedImagePaths.has(path) || pendingPreloadMap.has(path)) return;
+
+            const img = new Image();
+            img.decoding = 'async';
+            if ('loading' in HTMLImageElement.prototype) {
+                img.loading = 'eager';
+            }
+
+            pendingPreloadMap.set(path, img);
+            img.onload = () => {
+                preloadedImagePaths.add(path);
+                pendingPreloadMap.delete(path);
+            };
+            img.onerror = (error) => {
+                pendingPreloadMap.delete(path);
+                console.warn(`[preloadImageAtIndex] Failed to preload image ${path}`, error);
+            };
+            img.src = path;
+        }
+
+        function preloadUpcomingImages() {
+            if (!questionQueue.length) return;
+            const count = Math.min(PRELOAD_AHEAD_COUNT, questionQueue.length);
+            for (let i = 0; i < count; i++) {
+                preloadImageAtIndex(questionQueue[i]);
             }
         }
 
@@ -1885,7 +1949,9 @@
             // updateScoreDisplay(); // Score is cumulative, round correct/wrong reset
 
             done = new Array(numOfProbs).fill(false);
-            x = -1; 
+            resetPreloadState();
+            initializeQuestionQueue();
+            x = -1;
 
             const nextBtn = document.getElementById('next');
             nextBtn.innerText = "下一個";
@@ -2000,6 +2066,8 @@
                                 if (numOfProbs === 0) throw new Error("No data loaded from JSON.");
                                 data = parseMultiAns(data);
                                 done = new Array(numOfProbs).fill(false);
+                                resetPreloadState();
+                                initializeQuestionQueue();
                                 console.log("[createStartHandler] Data loaded. numOfProbs:", numOfProbs, "Initial done array:", JSON.parse(JSON.stringify(done)));
                                 startGame();
                             } catch (error) {
@@ -2080,6 +2148,8 @@
                         numOfProbs = data.length;
                         data = parseMultiAns(data);
                         done = new Array(numOfProbs).fill(false);
+                        resetPreloadState();
+                        initializeQuestionQueue();
                         console.log("[createAllGameHandler] All data loaded. numOfProbs:", numOfProbs, "Initial done array:", JSON.parse(JSON.stringify(done)));
                         startGame();
                     } catch (error) {
@@ -2423,6 +2493,9 @@
                 done = (Array.isArray(prog.done) && prog.done.length === numOfProbs) ? prog.done : new Array(numOfProbs).fill(false);
                  console.log("[resumeButton] Loaded 'done' array:", JSON.parse(JSON.stringify(done)));
 
+                resetPreloadState();
+                initializeQuestionQueue();
+
                 correct = Number(prog.correct) || 0;
                 wrong = Number(prog.wrong) || 0;
                 // score is loaded from Firebase via fetchLeaderboard, or from prog if available (though Firebase is master)
@@ -2520,6 +2593,9 @@
                 wrong = 0;
                 correctList = [];
                 wrongList = [];
+                done = [];
+                x = -1;
+                resetPreloadState();
                 // Score will be fetched from Firebase by fetchLeaderboard on next init/game start
                 // For display purposes, reset local score value that updateScoreDisplay uses
                 // score = 0; // Reset local score value; Firebase score is the master
@@ -2950,21 +3026,18 @@
         }
         function pickNewImage() {
             console.log("[pickNewImage] Called. Current 'done' array:", JSON.parse(JSON.stringify(done)));
-             const availableIndices = [];
-            for (let i = 0; i < numOfProbs; i++) {
-                if (!done[i]) availableIndices.push(i);
-            }
-            console.log("[pickNewImage] Available indices:", JSON.parse(JSON.stringify(availableIndices)));
-
-
-            if (availableIndices.length === 0) {
-                return -1; 
+            if (!questionQueue.length) {
+                initializeQuestionQueue();
             }
 
-            const randomIndex = Math.floor(Math.random() * availableIndices.length);
-            const selectedIndex = availableIndices[randomIndex];
-            done[selectedIndex] = true; 
+            if (!questionQueue.length) {
+                return -1;
+            }
+
+            const selectedIndex = questionQueue.shift();
+            done[selectedIndex] = true;
             console.log(`[pickNewImage] Selected index: ${selectedIndex}. Updated 'done' array:`, JSON.parse(JSON.stringify(done)));
+            preloadUpcomingImages();
             return selectedIndex;
         }
         function updateImage(isResuming = false) {
@@ -3100,23 +3173,24 @@
             }
         });
 
-        window.preloadNextImage = function preloadNextImage() {
-            if (!data || numOfProbs === 0) return; 
-            const nextIndex = (x + 1) % numOfProbs; 
-            if (nextIndex < 0 || nextIndex >= data.length || !data[nextIndex]) return;
-
-            const nextPath = data[nextIndex]?.path;
-            if (nextPath) {
-                const img = new Image();
-                img.decoding = 'async';
-                if ('loading' in HTMLImageElement.prototype) {
-                    img.loading = 'lazy';
-                }
-                if ('fetchPriority' in img) {
-                    img.fetchPriority = 'low';
-                }
-                img.src = nextPath;
+        window.handleMainImageLoad = function handleMainImageLoad(imgElement) {
+            if (!imgElement) return;
+            imgElement.classList.add('loaded');
+            const loadingScreen = document.querySelector('.loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.display = 'none';
             }
+
+            const attrSrc = imgElement.getAttribute('src');
+            if (attrSrc) {
+                preloadedImagePaths.add(attrSrc);
+            }
+
+            window.preloadNextImage();
+        };
+
+        window.preloadNextImage = function preloadNextImage() {
+            preloadUpcomingImages();
         }
     </script>
 </body>
