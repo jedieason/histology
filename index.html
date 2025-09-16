@@ -301,9 +301,14 @@
             transition: transform 0.3s ease;
         }
 
-        .dropdown-menu:hover .dropdown-toggle::after,
         .dropdown-menu.active .dropdown-toggle::after {
             transform: translateY(-50%) rotate(180deg);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .dropdown-menu:hover .dropdown-toggle::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
         }
 
         .dropdown-content {
@@ -344,11 +349,18 @@
         }
 
 
-        .dropdown-menu:hover .dropdown-content,
         .dropdown-menu.active .dropdown-content {
             display: block;
             opacity: 0;
             animation: elegantDropdownAppear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .dropdown-menu:hover .dropdown-content {
+                display: block;
+                opacity: 0;
+                animation: elegantDropdownAppear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            }
         }
 
         @keyframes elegantDropdownAppear {
@@ -386,6 +398,20 @@
             background-color: var(--accent-blue-hover);
             color: var(--bg-secondary);
             transform: none;
+        }
+
+        .modal-errata-number {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+
+        .doc-text .errata-number {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            margin-bottom: 0;
         }
 
 
@@ -1312,7 +1338,13 @@
             <div class="loading-screen">
                 <div class="spinner"></div>
             </div>
-            <img id="image" onload="this.classList.add('loaded'); document.querySelector('.loading-screen').style.display='none'; preloadNextImage();" src="" alt="Parasite Image">
+            <img id="image"
+                 loading="eager"
+                 decoding="async"
+                 fetchpriority="high"
+                 onload="this.classList.add('loaded'); document.querySelector('.loading-screen').style.display='none'; preloadNextImage();"
+                 src=""
+                 alt="Parasite Image">
         </div>
 
         <div class="card-answer">
@@ -1354,10 +1386,16 @@
         <span id="closeImageModal" class="close" style="top: 4px; right: 10px;">&times;</span>
         <button id="prevImageButton" class="nav-button nav-left" aria-label="上一題">‹</button>
         <button id="nextImageButton" class="nav-button nav-right" aria-label="下一題">›</button>
-        <img id="modalImage" src="" alt="Image preview" style="max-width: 100%; height: auto; border-radius:6px;">
+        <img id="modalImage"
+             loading="lazy"
+             decoding="async"
+             src=""
+             alt="Image preview"
+             style="max-width: 100%; height: auto; border-radius:6px;">
         <div id="modalInfo" style="text-align:center;">
           <p id="modalAnswer" style="font-weight:600;"></p>
-          <p id="modalExplanation" style="color:var(--text-secondary); margin-bottom: 0;"></p>
+          <p id="modalExplanation" style="color:var(--text-secondary); margin-bottom: 4px;"></p>
+          <p id="modalNumber" class="modal-errata-number"></p>
         </div>
       </div>
     </div>
@@ -2163,6 +2201,33 @@
             adjustPlaceholder();
             window.addEventListener('resize', adjustPlaceholder);
 
+            function populateImageModal(item) {
+                if (!item) return;
+                const modalImage = document.getElementById('modalImage');
+                if (modalImage) {
+                    modalImage.src = item.path || '';
+                    modalImage.alt = item.answer?.[0] || 'Image preview';
+                    if ('fetchPriority' in modalImage) {
+                        modalImage.fetchPriority = 'high';
+                    }
+                }
+                const modalAnswer = document.getElementById('modalAnswer');
+                if (modalAnswer) {
+                    modalAnswer.textContent = Array.isArray(item.answer) ? item.answer.join(' / ') : '';
+                }
+                const modalExplanation = document.getElementById('modalExplanation');
+                if (modalExplanation) {
+                    modalExplanation.textContent = item.explanation || '';
+                }
+                const modalNumber = document.getElementById('modalNumber');
+                if (modalNumber) {
+                    const errataValue = item.num !== undefined && item.num !== null && String(item.num).trim() !== ''
+                        ? String(item.num)
+                        : 'N/A';
+                    modalNumber.textContent = `勘誤編號：${errataValue}`;
+                }
+            }
+
             document.getElementById("openDoc").addEventListener("click", function() {
                 const container = document.getElementById("docContainer");
                 const content = document.getElementById("docContent");
@@ -2178,13 +2243,15 @@
                         const img = document.createElement('img');
                         img.src = item.path;
                         img.alt = item.answer[0] || '';
+                        img.loading = 'lazy';
+                        img.decoding = 'async';
+                        if ('fetchPriority' in img) {
+                            img.fetchPriority = 'low';
+                        }
                         entry.appendChild(img);
                         img.style.cursor = 'pointer';
                         img.addEventListener('click', () => {
-                          document.getElementById('modalImage').src = item.path;
-                          document.getElementById('modalAnswer').textContent = item.answer.join(' / ');
-                          const expl = item.explanation ? item.explanation : '';
-                          document.getElementById('modalExplanation').textContent = expl;
+                          populateImageModal(item);
                           document.getElementById('imageModal').style.display = 'flex';
                           document.getElementById('imageModal').style.opacity = '1';
                           window.modalIndex = dataArr.indexOf(item);
@@ -2193,13 +2260,21 @@
                       const textWrapper = document.createElement('div');
                       textWrapper.className = 'doc-text';
                       const ans = document.createElement('p');
-                      ans.innerHTML = `<strong>${item.answer.join(' / ')}</strong>`;
+                      const answerContent = Array.isArray(item.answer) ? item.answer.join(' / ') : '';
+                      ans.innerHTML = `<strong>${escapeHtml(answerContent)}</strong>`;
                       textWrapper.appendChild(ans);
                       if (item.explanation) {
                         const pre = document.createElement('pre');
                         pre.textContent = item.explanation;
                         textWrapper.appendChild(pre);
                       }
+                      const errata = document.createElement('p');
+                      errata.className = 'errata-number';
+                      const errataValue = item.num !== undefined && item.num !== null && String(item.num).trim() !== ''
+                        ? String(item.num)
+                        : 'N/A';
+                      errata.textContent = `勘誤編號：${errataValue}`;
+                      textWrapper.appendChild(errata);
                       entry.appendChild(textWrapper);
                       content.appendChild(entry);
                     });
@@ -2219,18 +2294,14 @@
                 if (window.docData) {
                     window.modalIndex = (window.modalIndex - 1 + window.docData.length) % window.docData.length;
                     const it = window.docData[window.modalIndex];
-                    document.getElementById('modalImage').src = it.path;
-                    document.getElementById('modalAnswer').textContent = it.answer.join(' / ');
-                    document.getElementById('modalExplanation').textContent = it.explanation || '';
+                    populateImageModal(it);
                 }
             });
             nextBtn.addEventListener('click', () => {
                 if (window.docData) {
                     window.modalIndex = (window.modalIndex + 1) % window.docData.length;
                     const it = window.docData[window.modalIndex];
-                    document.getElementById('modalImage').src = it.path;
-                    document.getElementById('modalAnswer').textContent = it.answer.join(' / ');
-                    document.getElementById('modalExplanation').textContent = it.explanation || '';
+                    populateImageModal(it);
                 }
             });
             document.getElementById("closeDoc").addEventListener("click", function() {
@@ -2939,6 +3010,20 @@
         function resetTime() { clearTimeout(tm); }
         function showWrongList() { displayListInModal(wrongList, "你答錯的"); }
         function showCorrectList() { displayListInModal(correctList, "你答對的"); }
+        function escapeHtml(value) {
+            if (value === null || value === undefined) {
+                return '';
+            }
+            const stringValue = String(value);
+            const escapeMap = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            };
+            return stringValue.replace(/[&<>"']/g, match => escapeMap[match] || match);
+        }
         function displayListInModal(list, title) {
             let modal = document.getElementById('modal');
             let modalBody = document.getElementById('modalBody');
@@ -2951,16 +3036,25 @@
                 list.forEach(item => {
                     if (!item) return;
                     content += '<li>';
+                    const answers = Array.isArray(item.answer) ? item.answer : [];
+                    const answerText = answers.length ? answers.join(' / ') : 'N/A';
+                    const primaryAnswer = answers.length ? answers[0] : 'item';
                     if (item.path) {
-                        content += `<img src="${item.path}" alt="Image for ${item.answer?.[0] || 'item'}" style="max-width: 200px; margin-bottom: 8px; border-radius: 4px;">`;
+                        const sanitizedPath = escapeHtml(item.path);
+                        const sanitizedAlt = escapeHtml(primaryAnswer || 'item');
+                        content += `<img src="${sanitizedPath}" loading="lazy" decoding="async" alt="Image for ${sanitizedAlt}" style="max-width: 200px; margin-bottom: 8px; border-radius: 4px;">`;
                     } else { content += '<p><i>（沒跑出圖片）</i></p>'; }
-                    const answerText = Array.isArray(item.answer) ? item.answer.join(' / ') : 'N/A';
-                    content += `<p><strong>答案：</strong>${answerText}</p>`;
+                    const sanitizedAnswer = escapeHtml(answerText);
+                    content += `<p><strong>答案：</strong>${sanitizedAnswer}</p>`;
                     const explanationText = item.explanation?.trim();
                      if (explanationText && explanationText !== "\"\"" && explanationText !== "\"\"") {
                         const sanitizedExplanation = explanationText.replace(/<script.*?>.*?<\/script>/gi, '');
                         content += `<p style="font-size: 0.9rem; color: #4B5563;"><em>解釋：</em>${sanitizedExplanation}</p>`;
                      }
+                    const errataValue = item.num !== undefined && item.num !== null && String(item.num).trim() !== ''
+                        ? String(item.num)
+                        : 'N/A';
+                    content += `<p class="modal-errata-number">勘誤編號：${escapeHtml(errataValue)}</p>`;
                     content += '</li>';
                 });
                 content += '</ol>';
@@ -3014,6 +3108,13 @@
             const nextPath = data[nextIndex]?.path;
             if (nextPath) {
                 const img = new Image();
+                img.decoding = 'async';
+                if ('loading' in HTMLImageElement.prototype) {
+                    img.loading = 'lazy';
+                }
+                if ('fetchPriority' in img) {
+                    img.fetchPriority = 'low';
+                }
                 img.src = nextPath;
             }
         }
