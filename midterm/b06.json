@@ -1,7 +1,7 @@
 [
   {
     "num": "06101",
-    "path": "midterm-image/b06/06101.png",
+    "path": "06101.png",
     "answer": [
       "Lysosome"
     ],
@@ -10,7 +10,7 @@
   },
   {
     "num": "06102",
-    "path": "midterm-image/b06/06102.png",
+    "path": "06102.png",
     "answer": [
       "White adipose tissue",
       "osmic acid"
@@ -20,16 +20,16 @@
   },
   {
     "num": "06103",
-    "path": "midterm-image/b06/06103.png",
+    "path": "06103.png",
     "answer": [
       "Fibrocartilage"
     ],
-    "explanation": "圖中的細胞相當小，數個為一群排列成鏈狀，可能為 chondrocyte。而圖中matrix很少，也沒有軟骨膜（perichondrium），為Fibrocartilage的特徵。",
+    "explanation": "圖中的細胞相當小，數個為一群排列成鏈狀，可能為chondrocyte。而圖中matrix很少，也沒有軟骨膜（perichondrium），為Fibrocartilage的特徵。",
     "description": "寫出視野下組織名稱。Be specific!"
   },
   {
     "num": "06104",
-    "path": "midterm-image/b06/06104.png",
+    "path": "06104.png",
     "answer": [
       "Sympathetic ganglion",
       "multipolar neuron"
@@ -39,26 +39,25 @@
   },
   {
     "num": "06105",
-    "path": "midterm-image/b06/06105.png",
+    "path": "06105.png",
     "answer": [
-      "Macrophage"
+      "Basal body"
     ],
     "explanation": "此圖為EM下的影像，可見延伸出細胞的長條狀結構為cilia。cilia中的深染區域為motile cilia中的軸絲（axoneme），由9×2+2微管組成。而圖中所指為cilia的基部，稱為basal body，作為axoneme的發生和固著點，由9×3+0微管組成。",
     "description": "寫出箭頭所指之構造名稱。"
   },
   {
     "num": "06106",
-    "path": "midterm-image/b06/06106.png",
+    "path": "06106.png",
     "answer": [
-      "Submucosa",
-      "dense irregular connective tissue"
+      "Macrophage"
     ],
     "explanation": "Vital stain是利用活體的macrophage具有吞噬作用，會吃掉染劑的特性，在活體動物打入染劑，使macrophage被染成藍色，容易觀察。",
     "description": "寫出染上藍色的細胞名稱。"
   },
   {
     "num": "06107",
-    "path": "midterm-image/b06/06107.png",
+    "path": "06107.png",
     "answer": [
       "Submucosa",
       "dense irregular connective tissue"
@@ -68,7 +67,7 @@
   },
   {
     "num": "06108",
-    "path": "midterm-image/b06/06108.png",
+    "path": "06108.png",
     "answer": [
       "Mitochondria"
     ],
@@ -77,7 +76,7 @@
   },
   {
     "num": "06109",
-    "path": "midterm-image/b06/06109.png",
+    "path": "06109.png",
     "answer": [
       "Cilia",
       "basal body"
@@ -87,7 +86,7 @@
   },
   {
     "num": "06110",
-    "path": "midterm-image/b06/06110.png",
+    "path": "06110.png",
     "answer": [
       "Dorsal root ganglion",
       "pseudo-unipolar neuron"
@@ -97,7 +96,7 @@
   },
   {
     "num": "06111",
-    "path": "midterm-image/b06/06111.png",
+    "path": "06111.png",
     "answer": [
       "Satellite cell"
     ],
@@ -106,7 +105,7 @@
   },
   {
     "num": "06112",
-    "path": "midterm-image/b06/06112.png",
+    "path": "06112.png",
     "answer": [
       "Simple columnar epithelium with microvilli and goblet cell"
     ],
@@ -115,7 +114,7 @@
   },
   {
     "num": "06113",
-    "path": "midterm-image/b06/06113.png",
+    "path": "06113.png",
     "answer": [
       "Monocyte"
     ],
@@ -124,7 +123,7 @@
   },
   {
     "num": "06114",
-    "path": "midterm-image/b06/06114.png",
+    "path": "06114.png",
     "answer": [
       "Plasma cell"
     ],
@@ -133,7 +132,7 @@
   },
   {
     "num": "06115",
-    "path": "midterm-image/b06/06115.png",
+    "path": "06115.png",
     "answer": [
       "Bone",
       "decalcified bone"
@@ -143,7 +142,7 @@
   },
   {
     "num": "06116",
-    "path": "midterm-image/b06/06116.png",
+    "path": "06116.png",
     "answer": [
       "Pseudostratified columnar epithelium with stereocilia"
     ],
@@ -152,7 +151,7 @@
   },
   {
     "num": "06117",
-    "path": "midterm-image/b06/06117.png",
+    "path": "06117.png",
     "answer": [
       "Simple cuboidal epithelium"
     ],
@@ -161,7 +160,7 @@
   },
   {
     "num": "06118",
-    "path": "midterm-image/b06/06118.png",
+    "path": "06118.png",
     "answer": [
       "Centriole"
     ],
@@ -170,7 +169,7 @@
   },
   {
     "num": "06119",
-    "path": "midterm-image/b06/06119.png",
+    "path": "06119.png",
     "answer": [
       "Nucleolus"
     ],
@@ -179,7 +178,7 @@
   },
   {
     "num": "06120",
-    "path": "midterm-image/b06/06120.png",
+    "path": "06120.png",
     "answer": [
       "Hair cuticle"
     ],
@@ -188,7 +187,7 @@
   },
   {
     "num": "06121",
-    "path": "midterm-image/b06/06121.png",
+    "path": "06121.png",
     "answer": [
       "Osteoclast"
     ],
@@ -197,7 +196,7 @@
   },
   {
     "num": "06122",
-    "path": "midterm-image/b06/06122.png",
+    "path": "06122.png",
     "answer": [
       "Stratum basale"
     ],
@@ -206,7 +205,7 @@
   },
   {
     "num": "06123",
-    "path": "midterm-image/b06/06123.png",
+    "path": "06123.png",
     "answer": [
       "Purkinje cell"
     ],
@@ -215,7 +214,7 @@
   },
   {
     "num": "06124",
-    "path": "midterm-image/b06/06124.png",
+    "path": "06124.png",
     "answer": [
       "Mast cell",
       "metachromasia"
@@ -225,7 +224,7 @@
   },
   {
     "num": "06125",
-    "path": "midterm-image/b06/06125.png",
+    "path": "06125.png",
     "answer": [
       "Choroid plexus"
     ],
@@ -234,7 +233,7 @@
   },
   {
     "num": "06126",
-    "path": "midterm-image/b06/06126.png",
+    "path": "06126.png",
     "answer": [
       "A"
     ],
@@ -243,7 +242,7 @@
   },
   {
     "num": "06127",
-    "path": "midterm-image/b06/06127.png",
+    "path": "06127.png",
     "answer": [
       "Node of Ranvier"
     ],
@@ -252,7 +251,7 @@
   },
   {
     "num": "06128",
-    "path": "midterm-image/b06/06128.png",
+    "path": "06128.png",
     "answer": [
       "Basophil"
     ],
@@ -261,7 +260,7 @@
   },
   {
     "num": "06129",
-    "path": "midterm-image/b06/06129.png",
+    "path": "06129.png",
     "answer": [
       "Tendon",
       "skeletal muscle"
@@ -271,7 +270,7 @@
   },
   {
     "num": "06130",
-    "path": "midterm-image/b06/06130.png",
+    "path": "06130.png",
     "answer": [
       "Smooth muscle",
       "smooth muscle"
@@ -281,7 +280,7 @@
   },
   {
     "num": "06131",
-    "path": "midterm-image/b06/06131.png",
+    "path": "06131.png",
     "answer": [
       "Elastic cartilage",
       "orcein"
@@ -291,7 +290,7 @@
   },
   {
     "num": "06132",
-    "path": "midterm-image/b06/06132.png",
+    "path": "06132.png",
     "answer": [
       "Lymphocyte"
     ],
@@ -300,7 +299,7 @@
   },
   {
     "num": "06133",
-    "path": "midterm-image/b06/06133.png",
+    "path": "06133.png",
     "answer": [
       "Volkmann’s canal"
     ],
@@ -309,7 +308,7 @@
   },
   {
     "num": "06134",
-    "path": "midterm-image/b06/06134.png",
+    "path": "06134.png",
     "answer": [
       "Epiphyseal plate"
     ],
@@ -318,7 +317,7 @@
   },
   {
     "num": "06135",
-    "path": "midterm-image/b06/06135.png",
+    "path": "06135.png",
     "answer": [
       "Huxley’s layer",
       "external root sheath"
