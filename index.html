@@ -2712,8 +2712,8 @@
         }
         function checkAns(input, ansArr) {
             if (!Array.isArray(ansArr)) return false;
-            const normalizedInput = input.trim().toLowerCase();
-            return ansArr.some(ans => ans.trim().toLowerCase() === normalizedInput);
+            const normalizedInput = input.replace(/\s*/g, "").toLowerCase();
+            return ansArr.some(ans => ans.replace(/\s*/g, "").toLowerCase() === normalizedInput);
         }
         function submitUserAnswer() {
             console.log("[submitUserAnswer] Called. viewing:", viewing, "isComposing:", isComposing);
@@ -2722,7 +2722,7 @@
                 return;
             }
             var userAnswerRaw = document.getElementById("answer").value;
-            var lowerUserAnswer = userAnswerRaw.trim().toLowerCase();
+            var lowerUserAnswer = userAnswerRaw.replace(/\s*/g, "").toLowerCase();
             console.log("[submitUserAnswer] User answer (raw):", userAnswerRaw, "(lower):", lowerUserAnswer);
 
 
@@ -2740,7 +2740,7 @@
             clearTimeout(tm);
 
             var userAnswer = userAnswerRaw;
-            if (userAnswer.trim() === "") return;
+            if (userAnswer.replace(/\s*/g, "") === "") return;
 
             viewing = true;
             document.querySelector('.answer-input-container').style.visibility = 'hidden';
