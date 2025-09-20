@@ -2118,31 +2118,7 @@
                     nextBtn.addEventListener('click', nextProb); 
 
                     try {
-                        // 獲取所有JSON文件
-                        const jsonFiles = await getAllJsonFiles();
-                        console.log("[createAllGameHandler] Found JSON files:", jsonFiles);
-                        
-                        if (jsonFiles.length === 0) {
-                            throw new Error("No JSON files found in directory");
-                        }
-
-                        // 合併所有JSON數據
-                        const allData = [];
-                        for (const file of jsonFiles) {
-                            try {
-                                const fileData = await $.getJSON(`./${file}`);
-                                if (Array.isArray(fileData)) {
-                                    allData.push(...fileData);
-                                }
-                                console.log(`[createAllGameHandler] Loaded ${fileData.length} items from ${file}`);
-                            } catch (error) {
-                                console.warn(`[createAllGameHandler] Failed to load ${file}:`, error);
-                            }
-                        }
-
-                        if (allData.length === 0) {
-                            throw new Error("No valid data loaded from any JSON files");
-                        }
+                        const allData = await loadAllMidtermJsonData();
 
                         data = allData;
                         numOfProbs = data.length;
@@ -2196,9 +2172,37 @@
                 } catch (error) {
                     console.log("[getAllJsonFiles] Could not dynamically fetch file list, using known files");
                 }
-                
+
                 // 如果動態獲取失敗，返回已知的JSON文件
                 return MidtermJsonFiles;
+            }
+
+            async function loadAllMidtermJsonData() {
+                const jsonFiles = await getAllJsonFiles();
+                console.log("[loadAllMidtermJsonData] Found JSON files:", jsonFiles);
+
+                if (!Array.isArray(jsonFiles) || jsonFiles.length === 0) {
+                    throw new Error("No JSON files found in directory");
+                }
+
+                const allData = [];
+                for (const file of jsonFiles) {
+                    try {
+                        const fileData = await $.getJSON(`./${file}`);
+                        if (Array.isArray(fileData)) {
+                            allData.push(...fileData);
+                        }
+                        console.log(`[loadAllMidtermJsonData] Loaded ${fileData.length} items from ${file}`);
+                    } catch (error) {
+                        console.warn(`[loadAllMidtermJsonData] Failed to load ${file}:`, error);
+                    }
+                }
+
+                if (allData.length === 0) {
+                    throw new Error("No valid data loaded from any JSON files");
+                }
+
+                return allData;
             }
 
             document.getElementById("startAllGame").addEventListener("click", createAllGameHandler());
@@ -2298,14 +2302,16 @@
                 }
             }
 
-            document.getElementById("openDoc").addEventListener("click", function() {
+            document.getElementById("openDoc").addEventListener("click", async function() {
                 const container = document.getElementById("docContainer");
                 const content = document.getElementById("docContent");
-                content.innerHTML = '';
-                fetch('./midterm/all.json')
-                  .then(res => res.json())
-                  .then(dataArr => {
+                container.style.display = 'block';
+                content.innerHTML = '<p>載入中...</p>';
+
+                try {
+                    const dataArr = await loadAllMidtermJsonData();
                     window.docData = dataArr;
+                    content.innerHTML = '';
                     dataArr.forEach(item => {
                       const entry = document.createElement('div');
                       entry.className = 'doc-entry';
@@ -2348,12 +2354,10 @@
                       entry.appendChild(textWrapper);
                       content.appendChild(entry);
                     });
-                    container.style.display = 'block';
-                  })
-                  .catch(err => {
+                } catch (err) {
+                    console.error('[openDoc] Failed to load midterm data for doc view:', err);
                     content.innerHTML = '<p>讀取資料失敗</p>';
-                    container.style.display = 'block';
-                  });
+                }
             });
             document.getElementById('closeImageModal').addEventListener('click', () => {
               document.getElementById('imageModal').style.display = 'none';
