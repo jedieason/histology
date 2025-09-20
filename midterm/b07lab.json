@@ -1,13 +1,12 @@
 [
     {
       "num": "7201",
-      "path": "",
+      "path": "7201.png",
       "answer": [
-        "B",
-        "Eosinophil"
+        "1C2D3A4B5E"
       ],
       "explanation": "Eosinophil的細胞核裂成2葉，於LM下可見紅色大顆的specific granule；於EM下可見azurophilic granule與specific granule，其中specific granule中可見electron-dense的crystalloid body。\n【出處】共筆 Vol.3 P.9, 28",
-      "description": "題目為LM eosinophil，選項為四張電顯圖，分別是monocyte、eosinophil、basophil、neutrophil，跟13、14共用選項。選項圖片亡佚。 "
+      "description": "將LM和EM圖做配對(ex 1B2A3C4E5D)"
     },
     {
       "num": "7202",
@@ -116,26 +115,6 @@
       ],
       "explanation": "可見nerve fiber末端接近muscle fiber的部分有橢圓形的構造，為motor end plate。\n【出處】07共筆 Vol.7 P.45",
       "description": "紅圈所示為何種組織？"
-    },
-    {
-      "num": "7213",
-      "path": "",
-      "answer": [
-        "D",
-        "Neutrophil"
-      ],
-      "explanation": "Neutrophil在LM下可見細胞質有染色顆粒，為顆粒球，且核分裂成多葉；在EM下可見3~5葉的細胞核，內有深染的heterochromatin，細胞質有深色azurophilic granules和顏色較淺、尺寸較小的specific granules，可觀察到偽足。\n【出處】共筆 Vol.3 P.7, 28",
-      "description": "同第一題考法。選項圖片亡佚。 "
-    },
-    {
-      "num": "7214",
-      "path": "",
-      "answer": [
-        "C",
-        "Basophil"
-      ],
-      "explanation": "Basophil較紅血球大，在LM下整顆血球充滿染成藍紫色的顆粒，幾乎無法看見細胞核；在EM下可見azurophilic granule及顆粒大、圓，且整顆electron-dense的specific granules。\n【出處】共筆 Vol.3 P.10, 28",
-      "description": "同第一題考法。選項圖片亡佚。 "
     },
     {
       "num": "7215",
