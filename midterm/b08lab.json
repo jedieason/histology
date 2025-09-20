@@ -52,11 +52,10 @@
     "num": "08206",
     "path": "midterm-image/b08lab/08206.png",
     "answer": [
-      "B",
       "Eosinophil"
     ],
     "explanation": "Eosinophil 的細胞核裂成 2 葉，於 LM 下可見紅色大顆的 specific granule；於 EM 下可見 azurophilic granule 與 specific granule，其中 specific granule 中可見 electron-dense 的 crystalloid body。",
-    "description": "選擇題，看LM找EM？選項同上兩題。"
+    "description": "這是什麼細胞?"
   },
   {
     "num": "08207",
